@@ -1,0 +1,6 @@
+FROM alpine-jdk:base
+MAINTAINER javaonfly
+ADD /target/EmployeeSearchService-0.0.1-SNAPSHOT.jar EmployeeSearchService.jar
+ADD /bin/EmployeeSearch-entrypoint.sh EmployeeSearch-entrypoint.sh
+RUN chmod 755 EmployeeSearch-entrypoint.sh
+EXPOSE 8080

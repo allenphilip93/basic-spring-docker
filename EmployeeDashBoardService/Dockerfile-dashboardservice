@@ -1,0 +1,6 @@
+FROM alpine-jdk:base
+MAINTAINER javaonfly
+ADD /target/EmployeeDashBoardService-0.0.1-SNAPSHOT.jar EmployeeDashBoardService.jar
+COPY EmployeeDashBoardService.jar /bin/
+RUN chmod 755 /bin/EmployeeDashBoard-entrypoint.sh
+EXPOSE 8082

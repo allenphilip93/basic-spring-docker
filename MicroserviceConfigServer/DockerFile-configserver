@@ -1,0 +1,5 @@
+FROM alpine-jdk:base
+MAINTAINER javaonfly
+ADD /target/MicroserviceConfigServer-0.0.1-SNAPSHOT.jar MicroserviceConfigServer.jar
+ENTRYPOINT ["java", "-jar", "MicroserviceConfigServer.jar"]
+EXPOSE 9090

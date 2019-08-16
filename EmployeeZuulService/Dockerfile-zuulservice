@@ -1,0 +1,5 @@
+FROM alpine-jdk:base
+MAINTAINER javaonfly
+ADD /target/EmployeeZuulService--0.0.1-SNAPSHOT.jar EmployeeZuulService.jar
+ENTRYPOINT ["java", "-jar", "EmployeeZuulService.jar"]
+EXPOSE 8084
